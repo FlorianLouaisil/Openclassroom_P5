@@ -1,11 +1,25 @@
-import React from 'react';
-
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import MaskGroup from './assets/MaskGroup.png'
 import './Home.scss';
-import Card from './Card';
+
 
 function Home() {
-  return(
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    fetch('/data/items.json')
+      .then(response => {
+        return response.json();
+      })
+      .then(data => {
+        setData(data); 
+
+      })
+
+  },[]);
+  
+  return (
     <div className='ContentHome'>
 
       <section className='ContentBanner'>
@@ -14,15 +28,17 @@ function Home() {
       </section>
 
       <section className='card'>
-        <Card/>
+        {data.map(item => (
+          <Link to={`/ficheLogement/${item.id}`} className='test' key={item.id}> 
+            <img src={item.cover} alt={item.title} />
+            <h3>{item.title}</h3>
+          </Link>
+        ))}
       </section>
 
-
-    </div>  
-   
-  ) 
-
-
+    </div>
+  
+  );
 
 }
 

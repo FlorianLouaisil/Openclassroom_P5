@@ -29,7 +29,7 @@ function App() {
         <Route path="/home" element={<Home />} />
 
         {/* Route pour la page ficheLogement */}
-        <Route path="/ficheLogement" element={<FicheLogement />} />
+        <Route path="/ficheLogement/:id" element={<FicheLogement />} />
 
         {/* Route pour la page A propos */}
         <Route path="/info" element={<Info />} />

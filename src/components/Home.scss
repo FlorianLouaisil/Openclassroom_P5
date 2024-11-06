@@ -21,11 +21,12 @@
         }
     }
     .card{
-
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr; 
+        gap : 20px;
         background-color: #F6F6F6;
         border-radius: 25px;
         padding: 56px 50px;
-      
 
 
     }
@@ -36,14 +37,7 @@
         height: 100%;
         object-fit: cover;
     }
-    .voiture{
-        
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr; 
-        gap : 20px;
-        //place-items: center;
-      
-    }
+
 
     
     .test {
