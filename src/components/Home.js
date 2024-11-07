@@ -1,22 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import MaskGroup from './assets/MaskGroup.png'
-import './Home.scss';
+import MaskGroup from '../assets/MaskGroup.png'
+import '../styles/Home.scss';
 
 
 function Home() {
-  const [data, setData] = useState([]);
 
+  const [data, setData] = useState([]);
   useEffect(() => {
-    fetch('/data/items.json')
+    fetch('./data/items.json')
       .then(response => {
         return response.json();
       })
       .then(data => {
         setData(data); 
-
       })
-
   },[]);
   
   return (
@@ -29,7 +27,7 @@ function Home() {
 
       <section className='card'>
         {data.map(item => (
-          <Link to={`/ficheLogement/${item.id}`} className='test' key={item.id}> 
+          <Link to={`/ficheLogement/${item.id}`} className='fichelogement' key={item.id}> 
             <img src={item.cover} alt={item.title} />
             <h3>{item.title}</h3>
           </Link>
@@ -37,9 +35,7 @@ function Home() {
       </section>
 
     </div>
-  
   );
-
 }
 
 export default Home;

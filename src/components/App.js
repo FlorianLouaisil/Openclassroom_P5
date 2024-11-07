@@ -3,10 +3,9 @@ import { BrowserRouter as Router, Routes, Route, Link, Navigate } from 'react-ro
 import Home from './Home';
 import FicheLogement from './FicheLogement';
 import Info from './Info';
-
-import logo from './assets/logo.png'
-import logofooter from './assets/LogoFooter.png'
-import './App.scss';
+import logo from '../assets/logo.png'
+import logofooter from '../assets/LogoFooter.png'
+import '../styles/App.scss';
 
 function App() {
   return (

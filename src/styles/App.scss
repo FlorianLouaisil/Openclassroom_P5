@@ -1,39 +1,28 @@
-
-// $primary-color: #3498db;
-// $font-size: 16px;
-
 body{
-
     width: 100%;       
     margin:auto; 
     font-family: "Montserrat";
 
     header{
-       
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding : 45px 100px 50px 100px;
 
-
         nav {
-
             ul {
             list-style: none;
             }
-        
             li {
             display: inline-block;
             margin-left: 57px;
             }
-        
             a {
             text-decoration: none;
             color: inherit;
             font-size: 24px;
             }
         }
-    
     }
 
     footer{
@@ -41,10 +30,8 @@ body{
         padding-top: 66px;
         height: 114px;
         background-color: #000000;
-   
         text-align: center;
         
-      
         h3{
             color: white;
             margin: 20px;
