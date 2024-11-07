@@ -1,0 +1,60 @@
+.ContentCollapse {
+    height: auto;  /* Ajuste la hauteur en fonction du contenu */
+    border-radius: 5px;
+    background-color: #FF6060;
+    font-family: 'Montserrat';
+    margin-bottom: 20px;  /* Ajuste la marge entre les composants Collapse */
+   
+    img {
+       
+        width: 24px;
+        height: 14px;
+
+    }
+
+    .toggle-icon {
+        transition: transform 0.3s ease;  /* Ajoute une transition fluide */
+    }
+      
+    .toggle-icon.rotated {
+        transform: rotate(180deg);  /* Rotation de 180° */
+    }
+
+    h3 {
+        margin: 0;
+        font-weight: bold;
+        font-size: 24px;
+        color: white;
+    }
+
+    .test {
+        display: flex;
+        align-items: center;
+      
+        justify-content: space-between;
+        height: 52px;
+        margin-left: 15px;
+        margin-right: 20px;
+    }
+
+    p {
+       
+        margin-left: 15px;
+        margin-right: 20px;
+    }
+
+    .collapseContent {
+
+        background-color: #FBFBFB;
+        margin: 0;
+        overflow: hidden;
+        max-height: 0; /* Caché par défaut */
+        //opacity: 0.5;
+        transition: max-height 0.3s ease-in-out;
+    }
+
+    .collapseContent.open {
+        max-height: 500px;  /* Assure-toi que cette valeur est assez grande */
+        opacity: 1;
+    }
+}
