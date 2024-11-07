@@ -3,7 +3,6 @@ import '../styles/Collapse.scss';
 
 import FlecheHaut from '../assets/FlecheHaut.png';
 
-
 function Collapse({ title, description }) {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -25,7 +24,8 @@ function Collapse({ title, description }) {
       </div>
       <div className={`collapseContent ${isOpen ? 'open' : ''}`}>
         <div>
-          <p>{description}</p>
+          {/* Directement afficher le JSX de description */}
+          {description}
         </div>
       </div>
     </div>
