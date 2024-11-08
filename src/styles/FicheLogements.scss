@@ -12,8 +12,6 @@
     .InfoLogement{
         display: flex;
         .ContenuGauche{
-            // background-color: purple;
-       
             width: 50%;
             
           
@@ -26,8 +24,7 @@
             p{
                 margin: 0;
                 font-size:18px;
-                margin-bottom: 20px;
-                
+                margin-bottom: 20px; 
             }
 
             .tags{
@@ -48,16 +45,12 @@
                 height: 25px;
                 font-size: 14px;
                 font-weight: bold;
-             
-                
             }
         }
 
         .ContenuDroit{
-           
             width: 50%;
-            
-            // background-color: royalblue;
+
             .host{
                 display: flex;
                 justify-content: flex-end;
@@ -73,7 +66,6 @@
                 margin: 0;          
             }
               
- 
             .host-picture{
                 width: 64px;         
                 height: 64px;      
@@ -84,12 +76,9 @@
                 justify-content: flex-end;
                 gap :4px;
                 margin-bottom: 31px;
-              
             }
   
-
         }
-      
     }
 
     .collapse {
@@ -104,4 +93,31 @@
         }
     }
 
+    .imgbanner {
+        position: relative;
+        .arrow-button {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          background-color: transparent;
+          border: none;
+          cursor: pointer;
+          z-index: 10;
+    
+        &.left {
+            left: 10px;
+        }
+    
+        &.right {
+        right: 10px;
+        }
+    
+        img {
+            width: 40px;  
+            height: 40px;
+            object-fit: cover
+        }
+
+        }
+      }
 }
