@@ -25,15 +25,18 @@ function Home() {
         <h1>Chez vous, partout et ailleurs</h1>
         <img src={MaskGroup} alt=""/>
       </section>
-
-      <section className='card'>
-        {data.map(item => (
-          <Link to={`/ficheLogement/${item.id}`} className='fichelogement' key={item.id}> 
+      <section className="card">
+        {data.map((item, index) => (
+          <Link
+            to={`/ficheLogement/${item.id}`}
+            className="fichelogement"
+            key={`${item.id}-${index}`} 
+          >
             <img src={item.cover} alt={item.title} />
             <h3>{item.title}</h3>
           </Link>
         ))}
-      </section>
+    </section>
 
     </div>
   );

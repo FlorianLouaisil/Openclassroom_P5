@@ -18,13 +18,12 @@ function Collapse({ title, description }) {
         <img
           src={FlecheHaut} 
           onClick={toggleCollapse}
-          className={`toggle-icon ${isOpen ? 'rotated' : ''}`}  // Appliquer la classe 'rotated' lorsque ouvert
+          className={`toggle-icon ${isOpen ? 'rotated' : ''}`} 
           alt="flèche"
         />
       </div>
       <div className={`collapseContent ${isOpen ? 'open' : ''}`}>
         <div>
-          {/* Directement afficher le JSX de description */}
           {description}
         </div>
       </div>

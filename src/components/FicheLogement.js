@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';  
+import { useParams, useNavigate } from 'react-router-dom';
 import '../styles/FicheLogements.scss';
 import Collapse from './Collapse';
 
 import EtoilePleine from '../assets/EtoilePleine.png';
 import EtoileVide from '../assets/EtoileVide.png';
 
-import NavGauche from '../assets/NavGauche.png';  
-import NavDroite from '../assets/NavDroite.png';  
+import NavGauche from '../assets/NavGauche.png';
+import NavDroite from '../assets/NavDroite.png';
 
 function FicheLogement() {
   const { id } = useParams(); // Récupère l'id depuis l'URL
@@ -19,11 +19,11 @@ function FicheLogement() {
     fetch('../data/items.json')
       .then(response => response.json())
       .then(data => {
-        setLogements(data); 
-        const logementData = data.find(item => item.id === id); 
-        setLogement(logementData); 
+        setLogements(data);
+        const logementData = data.find(item => item.id === id);
+        setLogement(logementData);
       })
-  }, [id]);  
+  }, [id]);
 
   // Chargement du logement
   if (!logement) {
@@ -33,7 +33,8 @@ function FicheLogement() {
   // Fonction pour afficher les étoiles
   const Etoile = (note) => {
     const etoile = [];
-    for (let i = 1; i <= 5; i++) {
+    const maximalRating = 5;
+    for (let i = 1; i <= maximalRating; i++) {
       etoile.push(
         <img className='ImgEtoile' key={i} src={i <= note ? EtoilePleine : EtoileVide} alt='' />
       );
@@ -43,27 +44,27 @@ function FicheLogement() {
 
 
   //Logement précédent
-  function ImagePrecedente(){
+  function ImagePrecedente() {
     const indexActuel = logements.findIndex(l => l.id === logement.id);
     let logementPrecedent;
 
     if (indexActuel > 0) {
       logementPrecedent = logements[indexActuel - 1];
-    } 
+    }
     else {
       logementPrecedent = logements[logements.length - 1];
     }
     navigate(`/ficheLogement/${logementPrecedent.id}`);
   };
-  
+
   //Logement suivante
-  function ImageSuivante(){
+  function ImageSuivante() {
     const indexActuel = logements.findIndex(l => l.id === logement.id);
     let logementSuivant;
 
     if (indexActuel < logements.length - 1) {
       logementSuivant = logements[indexActuel + 1];
-    } 
+    }
     else {
       logementSuivant = logements[0];
     }
@@ -73,12 +74,12 @@ function FicheLogement() {
   return (
     <div className="fiche-logement">
       <div className="imgbanner">
-   
+
         <button onClick={ImagePrecedente} className="arrow-button left">
           <img src={NavGauche} alt="Flèche gauche" />
         </button>
-    
-        <img src={logement.cover} alt={logement.title} className="cover-image"/>
+
+        <img src={logement.cover} alt={logement.title} className="cover-image" />
 
         <button onClick={ImageSuivante} className="arrow-button right">
           <img src={NavDroite} alt="Flèche droite" />
@@ -93,7 +94,7 @@ function FicheLogement() {
 
           <div className='tags'>
             {logement.tags.map((tag, index) => (
-                <div className='tag' key={index}>{tag}</div>
+              <div className='tag' key={index}>{tag}</div>
             ))}
           </div>
         </div>
@@ -115,7 +116,7 @@ function FicheLogement() {
 
       <div className='collapse'>
         <div className='CollaspeGauche'>
-          <Collapse title="Description" description={logement.description}/>
+          <Collapse title="Description" description={logement.description} />
         </div>
 
         <div className='CollaspeDroite'>
