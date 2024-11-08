@@ -6,7 +6,7 @@ import Collapse from './Collapse';
 function Info() {
   return (
     <div className='ContentInfo'>
-      <img src={ImageBannerInfo} alt=""/>
+      <img className='ImageBannerInfo' src={ImageBannerInfo} alt=""/>
       <div className='collapse'>
         <Collapse 
           title="Fiabilité"

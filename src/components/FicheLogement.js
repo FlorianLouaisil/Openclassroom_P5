@@ -70,7 +70,7 @@ function FicheLogement() {
           </div>
 
 
-          <Collapse title="Description" description={logement.description}/>
+    
         </div>
 
         <div className='ContenuDroit'>
@@ -88,13 +88,25 @@ function FicheLogement() {
             {NbEtoile(parseInt(logement.rating))}
           </div>
         
-          <Collapse title="Équipements" description={<Equipements />}/>
-
+      
         </div>
 
 
 
+
+
       </div>
+
+      
+      <div className='collapse'>
+          <div className='CollaspeGauche'>
+            <Collapse title="Description" description={logement.description}/>
+          </div>
+
+          <div className='CollaspeDroite'>
+            <Collapse title="Équipements" description={<Equipements />}/>
+          </div>
+        </div>
     </div>
     
   );
