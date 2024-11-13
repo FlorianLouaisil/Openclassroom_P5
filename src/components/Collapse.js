@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import '../styles/Collapse.scss';
-
 import FlecheHaut from '../assets/FlecheHaut.png';
 
 function Collapse({ title, description }) {
@@ -21,6 +20,7 @@ function Collapse({ title, description }) {
           className={`toggle-icon ${isOpen ? 'rotated' : ''}`} 
           alt="flèche"
         />
+
       </div>
       <div className={`collapseContent ${isOpen ? 'open' : ''}`}>
         <div>

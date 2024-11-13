@@ -13,8 +13,6 @@
         display: flex;
         .ContenuGauche{
             width: 50%;
-            
-          
             h1{
                 margin :0;
                 padding-top: 30px;
@@ -32,7 +30,6 @@
                 display: flex;
                 gap: 10px;
                 margin-bottom: 24px;
-             
             }
             .tag{
                 display: flex;
@@ -77,7 +74,6 @@
                 gap :4px;
                 margin-bottom: 31px;
             }
-  
         }
     }
 
@@ -97,7 +93,7 @@
         position: relative;
         .arrow-button {
           position: absolute;
-          top: 50%;
+          top: 205px;
           transform: translateY(-50%);
           background-color: transparent;
           border: none;
@@ -109,9 +105,8 @@
         }
     
         &.right {
-        right: 10px;
+            right: 10px;
         }
-    
         img {
             width: 40px;  
             height: 40px;
@@ -120,4 +115,95 @@
 
         }
       }
+}
+
+@media (max-width: 768px) {
+    .fiche-logement{
+        padding : 0px 30px;
+        .InfoLogement{
+            flex-direction: column;
+
+            .ContenuDroit{
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-direction: row-reverse;
+
+                .host{
+                    align-items: center;
+                    gap:10px;
+                    margin-top: 25px;
+                    margin-bottom: 21px;
+                }
+                .etoile{
+                    display: flex;
+                    justify-content: flex-start;
+                    gap :4px;
+                    margin-bottom: 0px;
+                }
+            }
+            .ContenuGauche{
+                width: 100%;
+            }
+
+        }
+        .collapse{
+            flex-direction: column;
+            gap:0;
+            .CollaspeGauche{
+                width: 100%;
+            }
+            .CollaspeDroite{
+                width: 100%;
+            }
+        }
+
+    }
+}
+
+
+@media (max-width: 480px) {
+    .fiche-logement{
+        padding : 0px 20px;
+
+        .InfoLogement{
+            flex-direction: column;
+
+            .ContenuDroit{
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-direction: row-reverse;
+                .host{
+                    align-items: center;
+                    gap:10px;
+                    margin-top: 25px;
+                    margin-bottom: 21px;
+                }
+                .etoile{
+                    display: flex;
+                    justify-content: flex-start;
+                    gap :4px;
+                    margin-bottom: 0px;
+                }
+            }
+            .ContenuGauche{
+                width: 100%;
+            }
+
+        }
+        .collapse{
+            flex-direction: column;
+            gap:0;
+            .CollaspeGauche{
+                width: 100%;
+            }
+            .CollaspeDroite{
+                width: 100%;
+            }
+        }
+
+    }
 }

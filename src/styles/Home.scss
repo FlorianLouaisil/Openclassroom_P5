@@ -10,6 +10,9 @@
 
         Img{
             width: 100%;
+            height: 223px;
+            object-fit: cover;
+            border-radius:25px ;
         }
 
         h1{
@@ -49,3 +52,69 @@
     }
 }
 
+@media (max-width: 1024px) {
+    .ContentHome {
+        padding: 0px 30px 0px 30px;
+        .card {
+            padding: 40px 30px;  
+        }
+    
+        .ContentBanner h1 {
+            font-size: 36px; 
+        }
+    
+        .fichelogement img {
+            height: 250px;  
+        }
+    
+        .fichelogement h3 {
+            font-size: 16px; 
+        }
+    }
+
+}
+
+@media (max-width: 768px) {
+    .ContentHome {
+        padding: 0px 30px 0px 30px;
+
+        .card {
+            display: grid;
+            grid-template-columns: 1fr; 
+        }
+        .ContentBanner h1 {
+            font-size: 28px; 
+        }
+    
+        .fichelogement img {
+            height: 200px;  
+        }
+    
+        .fichelogement h3 {
+            font-size: 14px; 
+        }
+    }
+
+}
+
+@media (max-width: 480px) {
+    .ContentHome {
+
+        padding: 0px 20px 0px 20px;
+        .ContentBanner h1 {
+            font-size: 20px; 
+        }
+    
+        .card {
+            padding: 20px 10px;  
+        }
+    
+        .fichelogement img {
+            height: 180px;  
+        }
+    
+        .fichelogement h3 {
+            font-size: 12px; 
+        }
+    }
+}

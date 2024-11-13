@@ -6,8 +6,7 @@ import Info from './Info';
 import logo from '../assets/logo.png'
 import logofooter from '../assets/LogoFooter.png'
 import '../styles/App.scss';
-
-import Erreur from './Erreur'; // Page 404
+import Erreur from './Erreur';
 
 function App() {
   return (
@@ -34,7 +33,7 @@ function App() {
     
         {/* Route pour la page A propos */}
         <Route path="/info" element={<Info />} />
-        {/* A expliqué permet de vérifier si la route /ficheLogement/:id est correcte*/}
+       
         <Route path="*" element={<Erreur />} />
       </Routes>
 

@@ -15,3 +15,17 @@
         color: inherit;
     }
 }
+
+@media (max-width: 768px) {
+    .erreur{
+        img{
+            height: 99px;
+        }
+        h1{
+            font-size: 18px;
+        }
+        .link{
+            font-size: 14px;
+        }
+    }
+}

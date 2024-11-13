@@ -1,12 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect} from 'react';
 import { Link } from 'react-router-dom';
-import MaskGroup from '../assets/MaskGroup.png'
+import ImageBannerHome from '../assets/ImageBannerHome.png'
 import '../styles/Home.scss';
-
 
 function Home() {
 
   const [data, setData] = useState([]);
+
+
   useEffect(() => {
     fetch('./data/items.json')
       .then(response => {
@@ -14,17 +15,18 @@ function Home() {
       })
       .then(data => {
         setData(data); 
-        console.log(data)
+
       })
   },[]);
-  
+ 
   return (
     <div className='ContentHome'>
 
       <section className='ContentBanner'>
         <h1>Chez vous, partout et ailleurs</h1>
-        <img src={MaskGroup} alt=""/>
+        <img src={ImageBannerHome} alt=""/>
       </section>
+
       <section className="card">
         {data.map((item, index) => (
           <Link

@@ -2,7 +2,7 @@
     border-radius: 5px;
     background-color: #FF6060;
     font-family: 'Montserrat';
-    margin-bottom: 30px;  /* Ajuste la marge entre les composants Collapse */
+    margin-bottom: 30px;  
     
     img {
         width: 24px;
@@ -10,11 +10,11 @@
     }
 
     .toggle-icon {
-        transition: transform 0.3s ease;  /* Ajoute une transition fluide */
+        transition: transform 0.3s ease; 
     }
       
     .toggle-icon.rotated {
-        transform: rotate(180deg);  /* Rotation de 180° */
+        transform: rotate(180deg); 
     }
 
     h3 {
@@ -42,8 +42,7 @@
         background-color: #FBFBFB;
         margin: 0;
         overflow: hidden;
-        max-height: 0; /* Caché par défaut */
-        //opacity: 0.5;
+        max-height: 0; 
         transition: max-height 0.3s ease-in-out;
     }
     
