@@ -1,7 +1,7 @@
 import React from 'react';
-import ImageBannerInfo from '../assets/ImageBannerInfo.png'
-import '../styles/Info.scss';
-import Collapse from './Collapse';
+import ImageBannerInfo from '../../assets/ImageBannerInfo.png'
+import './Info.scss';
+import Collapse from '../Collapse/Collapse';
 
 function Info() {
 
@@ -26,8 +26,8 @@ function Info() {
 
   return (
     <main className='ContentInfo'>
-      <img className='ImageBannerInfo' src={ImageBannerInfo} alt=""/>
-      <section className='collapse'>
+      <img className='ImageBannerInfo' src={ImageBannerInfo} alt="ImagePaysage"/>
+      <section className='Collapse'>
         {collapseData.map((item, index) => (
           <Collapse 
             key={index} 

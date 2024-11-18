@@ -1,10 +1,9 @@
-// src/routes/Routes.js
 import React from 'react';
 import { Route, Routes, Navigate } from 'react-router-dom';
-import Home from './Home';
-import FicheLogement from '../components/FicheLogement';
-import Info from '../components/Info';
-import Erreur from '../components/Erreur';
+import Home from '../Home/Home';
+import Lodging from '../Lodging/Lodging';
+import Info from '../Info/Info';
+import Error from '../Error/Error';
 
 function RoutesComponent(){
     return (
@@ -16,13 +15,13 @@ function RoutesComponent(){
             <Route path="/home" element={<Home />} />
 
             {/* Route pour la page ficheLogement */}
-            <Route path="/ficheLogement/:id" element={<FicheLogement />} />
+            <Route path="/lodging/:id" element={<Lodging />} />
             
             {/* Route pour la page A propos */}
-            <Route path="/info" element={<Info />} />
+            <Route path="/Info" element={<Info />} />
 
             {/* Page d'erreur pour les routes non définies */}
-            <Route path="*" element={<Erreur />} />
+            <Route path="*" element={<Error/>} />
         </Routes>
     )
 };

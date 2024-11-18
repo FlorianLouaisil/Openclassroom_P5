@@ -1,17 +1,17 @@
 import React from 'react';
-import erreur from '../assets/404.png'
+import error from '../../assets/404.png'
 import { Link } from 'react-router-dom';
-import '../styles/Erreur.scss';
+import './Error.scss';
 
-function Erreur() {
+function Error() {
   return (
-    <div className="erreur">
-      <img src={erreur} alt=""/>
+    <div className="error">
+      <img src={error} alt="Logo Erreur"/>
       <h1>Oups! La page que vous demandez n'existe pas.</h1>
       <Link to="/home" className="link">Retourner sur la page d'accueil</Link>
     </div>
   );
 }
 
-export default Erreur;
+export default Error;
  

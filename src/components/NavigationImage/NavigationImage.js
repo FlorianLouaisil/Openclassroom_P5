@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import NavGauche from '../assets/NavGauche.png';
-import NavDroite from '../assets/NavDroite.png';
+import NavLeft from '../../assets/NavGauche.png';
+import NavRight from '../../assets/NavDroite.png';
 
 function NavigationImage({ pictures }){
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -18,13 +18,13 @@ function NavigationImage({ pictures }){
     <section className="imgbanner">
 
       <button onClick={() => Navigation('prev')} className="arrow-button left">
-        <img src={NavGauche} alt="Flèche gauche" />
+        <img src={NavLeft} alt="Flèche gauche" />
       </button>
 
       <img src={pictures[currentImageIndex]}  className="cover-image" alt="ImageLogement" />
 
       <button onClick={() => Navigation('next')} className="arrow-button right">
-        <img src={NavDroite} alt="Flèche droite" />
+        <img src={NavRight} alt="Flèche droite" />
       </button>
       
     </section>

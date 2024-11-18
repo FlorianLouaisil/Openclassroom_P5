@@ -1,9 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Link } from 'react-router-dom';
-import logo from '../assets/logo.png';
-import logofooter from '../assets/LogoFooter.png';
-import '../styles/App.scss';
-import Routes from '../components/Routes';
+import logo from './assets/logo.png';
+import logofooter from './assets/LogoFooter.png';
+import './styles/App.scss';
+import Routes from './components/Routes/Routes';
 
 function App() {
   return (

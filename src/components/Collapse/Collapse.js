@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import '../styles/Collapse.scss';
-import FlecheHaut from '../assets/FlecheHaut.png';
+import './Collapse.scss';
+import FlecheHaut from '../../assets/FlecheHaut.png';
 
 function Collapse({ title, description }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,7 +11,7 @@ function Collapse({ title, description }) {
 
   return (
     <div className="ContentCollapse">
-      <div className="test">
+      <div className="HeaderCollapse">
         <h3>{title}</h3>
 
         <img

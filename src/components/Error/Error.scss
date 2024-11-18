@@ -1,4 +1,4 @@
-.erreur{
+.error{
     font-family: 'Montserrat' ;
     text-align: center;
     padding: 89px 0px 101px 0px;
@@ -17,7 +17,7 @@
 }
 
 @media (max-width: 768px) {
-    .erreur{
+    .error{
         img{
             height: 99px;
         }

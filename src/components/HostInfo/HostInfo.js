@@ -1,6 +1,6 @@
 import React from 'react';
 
-const HostInfo = ({ host }) => {
+function HostInfo({ host }){
   const nameParts = host.name.split(' ');
 
   return (

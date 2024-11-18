@@ -1,4 +1,4 @@
-.fiche-logement{
+.lodging{
     padding : 0px 100px;
     font-family: "Montserrat";
     
@@ -9,9 +9,9 @@
         object-fit: cover;
         border-radius: 25px;
     }
-    .InfoLogement{
+    .Info{
         display: flex;
-        .ContenuGauche{
+        .ContentLeft{
             width: 50%;
             h1{
                 margin :0;
@@ -45,7 +45,7 @@
             }
         }
 
-        .ContenuDroit{
+        .ContentRight{
             width: 50%;
 
             .host{
@@ -68,7 +68,7 @@
                 height: 64px;      
                 border-radius: 50%;
             }
-            .etoile{
+            .Star{
                 display: flex;
                 justify-content: flex-end;
                 gap :4px;
@@ -77,14 +77,20 @@
         }
     }
 
-    .collapse {
+    .Collapse {
+    
+        ul{
+            list-style-type :none;
+            margin: 0;
+            padding: 19px 20px 19px 20px;
+        }
         display: flex;
         gap:76px;
-        .CollaspeGauche {
+        .CollapseLeft {
             width: 50%;
             
         }
-        .CollaspeDroite {
+        .CollapseRight {
             width: 50%;
         }
     }
@@ -118,12 +124,12 @@
 }
 
 @media (max-width: 768px) {
-    .fiche-logement{
+    .lodging{
         padding : 0px 30px;
-        .InfoLogement{
+        .Info{
             flex-direction: column;
 
-            .ContenuDroit{
+            .ContentRight{
                 width: 100%;
                 display: flex;
                 justify-content: space-between;
@@ -136,25 +142,25 @@
                     margin-top: 25px;
                     margin-bottom: 21px;
                 }
-                .etoile{
+                .rating{
                     display: flex;
                     justify-content: flex-start;
                     gap :4px;
                     margin-bottom: 0px;
                 }
             }
-            .ContenuGauche{
+            .ContentLeft{
                 width: 100%;
             }
 
         }
-        .collapse{
+        .Collapse{
             flex-direction: column;
             gap:0;
-            .CollaspeGauche{
+            .CollapseLeft{
                 width: 100%;
             }
-            .CollaspeDroite{
+            .CollapseRight{
                 width: 100%;
             }
         }
@@ -164,13 +170,13 @@
 
 
 @media (max-width: 480px) {
-    .fiche-logement{
+    .lodging{
         padding : 0px 20px;
 
-        .InfoLogement{
+        .Info{
             flex-direction: column;
 
-            .ContenuDroit{
+            .ContentRight{
                 width: 100%;
                 display: flex;
                 justify-content: space-between;
@@ -182,25 +188,25 @@
                     margin-top: 25px;
                     margin-bottom: 21px;
                 }
-                .etoile{
+                .rating{
                     display: flex;
                     justify-content: flex-start;
                     gap :4px;
                     margin-bottom: 0px;
                 }
             }
-            .ContenuGauche{
+            .ContentLeft{
                 width: 100%;
             }
 
         }
-        .collapse{
+        .Collapse{
             flex-direction: column;
             gap:0;
-            .CollaspeGauche{
+            .CollapseLeft{
                 width: 100%;
             }
-            .CollaspeDroite{
+            .CollapseRight{
                 width: 100%;
             }
         }

@@ -1,18 +1,17 @@
 import React, { useState, useEffect} from 'react';
 import { useParams } from 'react-router-dom';
-import '../styles/FicheLogements.scss';
-import Collapse from './Collapse';
-import Etoile from './Etoile';
-import NavigationImage from './NavigationImage'; 
-import HostInfo from './HostInfo';
-import Tags from './Tags';
-import Erreur from './Erreur';
+import './Lodging.scss';
+import Collapse from '../Collapse/Collapse';
+import Rating from '../Rating/Rating';
+import NavigationImage from '../NavigationImage/NavigationImage'; 
+import HostInfo from '../HostInfo/HostInfo';
+import Tags from '../Tags/Tags';
+import Erreur from '../Error/Error';
 
-function FicheLogement() { 
-  const { id } = useParams(); // Récupère l'id depuis l'URL
-  const [logement, setLogement] = useState(null); // Stocke le logement sélectionné
-  
+function Lodging() { 
 
+  const { id } = useParams(); 
+  const [logement, setLogement] = useState(null); 
 
   useEffect(() => {
     fetch('../data/items.json')
@@ -26,31 +25,32 @@ function FicheLogement() {
   if (!logement) {
     return logement === null ? <div>Chargement</div> : <Erreur />;
   }
+
   return (
-    <main className="fiche-logement">
+    <main className="lodging">
       <NavigationImage pictures={logement.pictures} />
 
-      <section className='InfoLogement'>
+      <section className='Info'>
 
-        <div className='ContenuGauche'>
+        <div className='ContentLeft'>
           <h1>{logement.title}</h1>
           <p>{logement.location}</p>
           <Tags tags={logement.tags} />
         </div>
 
-        <div className='ContenuDroit'>
+        <div className='ContentRight'>
           <HostInfo host={logement.host} />
-          <Etoile note={parseInt(logement.rating)} />
+          <Rating note={parseInt(logement.rating)} />
         </div>
 
       </section>
 
-      <section className='collapse'>
-        <div className='CollaspeGauche'>
+      <section className='Collapse'>
+        <div className='CollapseLeft'>
           <Collapse title="Description" description={logement.description} />
         </div>
 
-        <div className='CollaspeDroite'>
+        <div className='CollapseRight'>
           <Collapse title="Équipements" description={<ul>{logement.equipments.map((equipment, index) => (
             <li key={index}>{equipment}</li>
           ))}
@@ -62,4 +62,4 @@ function FicheLogement() {
   );
 }
 
-export default FicheLogement;
+export default Lodging;
