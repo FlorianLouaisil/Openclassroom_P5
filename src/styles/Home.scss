@@ -24,32 +24,62 @@
         }
     }
     .card{
+       
         display: grid;
         grid-template-columns: 1fr 1fr 1fr; 
         gap : 20px;
         background-color: #F6F6F6;
         border-radius: 25px;
         padding: 56px 50px;
+
+        .fichelogement { 
+         
+            position: relative;
+        
+       
+  
+        }
+
+        .fichelogement Img{
+            display: block;
+            width: 100%;
+            height: 340px;
+            object-fit: cover;
+            border-radius:25px ;
+            
+        }
+    
+        .fichelogement h3 {
+           
+            position: absolute;
+            margin: 0;
+            bottom: 20px;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+        
+            white-space: wrap;  
+            z-index: 2; 
+            left: 20px;
+
+
+        }
+        .shadow {
+            
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0)); 
+            border-radius: 25px;
+            z-index: 1; 
+     
+           
+        }
     }
 
-    .fichelogement { position: relative;}
 
-    .fichelogement Img{
-        border-radius: 10px;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-
-    .fichelogement h3 {
-        position: absolute;
-        bottom: 0px;
-        color: white;
-        font-size: 18px;
-        font-weight: bold;
-        width: 100%;
-        white-space: wrap;  
-    }
 }
 
 @media (max-width: 1024px) {

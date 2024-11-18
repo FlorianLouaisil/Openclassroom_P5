@@ -15,7 +15,7 @@ function NavigationImage({ pictures }){
   };
 
   return (
-    <div className="imgbanner">
+    <section className="imgbanner">
 
       <button onClick={() => Navigation('prev')} className="arrow-button left">
         <img src={NavGauche} alt="Flèche gauche" />
@@ -27,7 +27,7 @@ function NavigationImage({ pictures }){
         <img src={NavDroite} alt="Flèche droite" />
       </button>
       
-    </div>
+    </section>
   );
 };
 

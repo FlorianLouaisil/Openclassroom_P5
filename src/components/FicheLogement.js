@@ -23,22 +23,14 @@ function FicheLogement() {
       })
   }, [id]);
 
-  if (!logement) { 
-    if (logement === null){
-      console.log("Bonne id")
-    }
-    else{
-      console.log("Mavaise id")
-      return(<Erreur />)
-    }
-    return(<div>Chargement</div>)
+  if (!logement) {
+    return logement === null ? <div>Chargement</div> : <Erreur />;
   }
-
   return (
-    <div className="fiche-logement">
+    <main className="fiche-logement">
       <NavigationImage pictures={logement.pictures} />
 
-      <div className='InfoLogement'>
+      <section className='InfoLogement'>
 
         <div className='ContenuGauche'>
           <h1>{logement.title}</h1>
@@ -51,9 +43,9 @@ function FicheLogement() {
           <Etoile note={parseInt(logement.rating)} />
         </div>
 
-      </div>
+      </section>
 
-      <div className='collapse'>
+      <section className='collapse'>
         <div className='CollaspeGauche'>
           <Collapse title="Description" description={logement.description} />
         </div>
@@ -65,8 +57,8 @@ function FicheLogement() {
           </ul>}/>
         </div>
 
-      </div>
-    </div>
+      </section>
+    </main>
   );
 }
 
